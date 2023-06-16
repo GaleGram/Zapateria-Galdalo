@@ -226,7 +226,7 @@ h5{
 
       nav ul {
         flex-direction: column; /* Alineamos los elementos verticalmente */
-        background-color: rgba(2,5,24,0.9); /* Cambiamos el color de fondo */
+        background-color: rgba(2,5,24,1.0); /* Cambiamos el color de fondo */
         position: absolute; /* Definimos la posición como absoluta */
         top: 40px; /* Colocamos el menú debajo del botón */
         left: 0; /* Lo alineamos a la izquierda */
