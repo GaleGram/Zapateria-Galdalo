@@ -1,0 +1,260 @@
+/*estilos globales*/
+*{
+    font-family: Arial, sans-serif;
+    text-align: center; 
+}
+/*inicio de estilos para los titulos*/
+footer {
+  background-color: rgba(2,5,24,1.0);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+
+}
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 35px;
+  color: rgb(255, 251, 253);
+}
+h2{
+  text-align: center;
+  margin: 5px 0;
+  font-size: 40px;
+  color: rgb(251,253,252);
+}
+/*fin de estilos para los titulos*/
+/*inicio de estilos para el acordeon*/
+.accordion {
+  width: 0 90%;
+  margin: 8%;
+  margin-top: 40px;
+  color: black;
+  background-color: rgba(2,5,24,1.0);
+  padding: 45px 45px;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 2em;
+  color: rgb(251,253,252);
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: rgb(253,251,252);
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+.accordion .content {
+  color: rgb(251,255,252);
+  position: relative;
+  height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(2,5,24,1.0);
+  transition: 0.5s;
+}
+
+.accordion hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordion .container.active .content {
+  height: 150px;
+  
+}
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+  color: rgb(253,251,252);
+} 
+@media screen and 
+(max-width: 600px){
+  h2{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(251,253,252);
+}
+  .accordion {
+  width: 0 90%;
+  margin: 8%;
+  margin-top: 40px;
+  color: black;
+  background-color: rgba(2,5,24,1.0);
+  padding: 45px 45px;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: rgb(251,253,252);
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: rgb(253,251,252);
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+.accordion .content {
+  color: rgb(251,255,252);
+  position: relative;
+  height: 0;
+  font-size: 14px;
+  text-align: justify;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(2,5,24,1.0);
+  transition: 0.5s;
+}
+
+.accordion hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordion .container.active .content {
+  height: 150px;
+  
+}
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+  color: rgb(253,251,252);
+} 
+
+
+
+
+}
+/*fin de estilos para el acordeon*/
+/*fondo y tipo de familia para el documento*/
+body {
+    
+    background-image: url(fondo1.jpg);
+    }
+
+
+/*fin del fondo y tipo de fuente*/
+/*estilos para la barra de navegacion*/
+header {
+    background-color: rgba(2,5,24,1.0);
+    padding: 10px 10%;
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(250,251,249);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f44336;
+}
+.menu-toggle{
+  display: none;
+}
+@media(max-width: 768px) { /* Definimos las reglas para una pantalla de máximo 768px */
+      nav ul {
+        flex-direction: column; /* Alineamos los elementos verticalmente */
+        background-color: rgba(2,5,24,1.0); /* Cambiamos el color de fondo */
+        position: absolute; /* Definimos la posición como absoluta */
+        top: 40px; /* Colocamos el menú debajo del botón */
+        left: 0; /* Lo alineamos a la izquierda */
+        right: 0; /* Lo alineamos a la derecha */
+        visibility: hidden; /* Lo hacemos invisible por defecto */
+        opacity: 0; /* Lo hacemos completamente transparente */
+        transition: all 0.5s ease-in-out; /* Añadimos efectos para la transición */
+      z-index: 1;
+      }
+      
+      nav li {
+        margin: 10px 0; /* Espacio entre elementos */
+      }
+      
+      nav a {
+        font-family: Arial, sans-serif;
+        color: rgb(251,252,253); /* Color del texto */
+        text-decoration: none; /* Quitamos el subrayado */
+        text-transform: uppercase; /* Convertimos el texto a mayúsculas */
+        font-size: 18px; /* Ampliamos el tamaño de fuente */
+      }
+      
+      nav .menu-toggle:checked + ul {
+        visibility: visible; /* Hacemos el menú visible cuando el botón correspondiente está activado */
+        opacity: 1; /* Lo hacemos completamente visible */
+      }
+      
+      nav .menu-toggle {
+        display: block; /* Mostramos el botón del menú */
+        position: absolute; /* Definimos su posición como absoluta */
+        top: 10px; /* Lo posicionamos en la parte superior */
+        right: 10px; /* Lo posicionamos en la parte derecha */
+        height: 30px; /* Definimos su altura */
+        width: 30px; /* Definimos su anchura */
+        cursor: pointer; /* Añadimos cursor personalizado */
+        z-index: 1; /* Lo colocamos por encima de los demás elementos */
+        background-color: rgba(2,5,24,0.9); /* Definimos un color de fondo */
+        border: none; /* Quitamos el borde */
+      }
+      
+      nav .menu-toggle:before {
+        content: "\f0c9"; /* Añadimos un icono de barras */
+        font-family: "Font Awesome 5 Free"; /* Incluimos la fuente de Font Awesome */
+        font-weight: bold; /* Definimos el peso de la fuente */
+        font-size: 18px; /* Definimos el tamaño de la fuente */
+        color: #333; /* Definimos el color del icono */
+        display: inline-block; /* Permitimos manipular su contenido */
+        height: 30px; /* Definimos su altura */
+        line-height: 30px; /* Definimos la altura de línea */
+        text-align: center; /* Alineamos el texto */
+      }
+    }
+/*fin de estilos para la barra de navegacion*/
+main {
+    width: 80%;
+    margin: 0 auto;
+}

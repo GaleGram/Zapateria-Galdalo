@@ -1,0 +1,332 @@
+/*estilos globales*/
+ body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image:url(fondo1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+
+}
+/*estilos para la barra de navegacion*/
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.product:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p { /* estilo del texto que se muestra al pasar el mouse */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(244, 67, 54);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(250,251,249);
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #f44336;
+  }
+header {
+  background-color: rgba(2,5,24,1.0);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+.menu-toggle{
+  display: none;
+}
+/* inicio de estilos para el slider*/
+.slider {
+  width: 0 20%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 600%;
+  transition: 2s;
+  animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  width: 20%;
+}
+
+@keyframes cambio {
+  0% {margin-left: 0;}
+  14% {margin-left: 0;}
+  
+  17% {margin-left: -100%;}
+  31% {margin-left: -100%;}
+  
+  34% {margin-left: -200%;}
+  50% {margin-left: -200%;}
+  
+  51% {margin-left: -300%;}
+  67% {margin-left: -300%;}
+
+  68% {margin-left: -400%;}
+  84% {margin-left: -400%;}
+
+  87% {margin-left: -500%;}
+  100% {margin-left: -500%;}
+}
+/*fin de estilos para el slider*/
+img {
+  max-width: auto;
+  height: auto;
+}
+h1{
+  margin-top: 30px;
+  font-size: 40px;
+  color: white;
+}
+h2{
+  font-size: 40px;
+  color:rgb(250,251,253);
+
+}
+h3{
+  margin-top: 50px;
+  font-size: 40px;
+  color: white;
+}
+p{
+font-size:20px;
+margin-top: 20px;
+margin-bottom: 40px;
+color: rgb(250,251,252);
+}
+
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+
+footer {
+  background-color: rgba(2,5,24,0.9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+
+}
+
+
+/*inicio de estilos para los contenedores de las imagenes de zapatos*/
+.products {
+  margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.products h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(2,5,24,1.0);
+    margin-left:80px ;
+    margin-right:80px;
+
+}
+.product {
+    flex-basis: 280px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(255,254,253);
+}
+
+.product h4 {
+    font-size: 20px;
+    color: rgba(244, 67, 54, 0.5);
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-bottom: 15px;
+}
+h5{
+  font-size: 25px;
+  color: rgb(244, 67, 54);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/*fin de estilos para los contenedores de imagenes zapatos*/
+@media(max-width: 768px) { /* Definimos las reglas para una pantalla de máximo 768px */
+
+      nav ul {
+        flex-direction: column; /* Alineamos los elementos verticalmente */
+        background-color: rgba(2,5,24,0.9); /* Cambiamos el color de fondo */
+        position: absolute; /* Definimos la posición como absoluta */
+        top: 40px; /* Colocamos el menú debajo del botón */
+        left: 0; /* Lo alineamos a la izquierda */
+        right: 0; /* Lo alineamos a la derecha */
+        visibility: hidden; /* Lo hacemos invisible por defecto */
+        opacity: 0; /* Lo hacemos completamente transparente */
+        transition: all 0.5s ease-in-out; /* Añadimos efectos para la transición */
+      }
+      
+      nav li {
+        margin: 10px 0; /* Espacio entre elementos */
+      }
+      
+      nav a {
+        font-family: Arial, sans-serif;
+        color: rgb(251,252,253); /* Color del texto */
+        text-decoration: none; /* Quitamos el subrayado */
+        text-transform: uppercase; /* Convertimos el texto a mayúsculas */
+        font-size: 18px; /* Ampliamos el tamaño de fuente */
+      }
+      
+      nav .menu-toggle:checked + ul {
+        visibility: visible; /* Hacemos el menú visible cuando el botón correspondiente está activado */
+        opacity: 1; /* Lo hacemos completamente visible */
+      }
+      #checkbox{
+background-image: url("img1");
+      }
+      
+      nav .menu-toggle {
+        display: block; /* Mostramos el botón del menú */
+        position: absolute; /* Definimos su posición como absoluta */
+        top: 10px; /* Lo posicionamos en la parte superior */
+        right: 10px; /* Lo posicionamos en la parte derecha */
+        height: 30px; /* Definimos su altura */
+        width: 30px; /* Definimos su anchura */
+        cursor: pointer; /* Añadimos cursor personalizado */
+        z-index: 1; /* Lo colocamos por encima de los demás elementos */
+        background-color: rgba(2,5,24,1.0); /* Definimos un color de fondo */
+        border: none; /* Quitamos el borde */
+      }
+      
+      nav .menu-toggle:before {
+        content: "\f0c9"; /* Añadimos un icono de barras */
+        font-family: "Font Awesome 5 Free"; /* Incluimos la fuente de Font Awesome */
+        font-weight: bold; /* Definimos el peso de la fuente */
+        font-size: 18px; /* Definimos el tamaño de la fuente */
+        color: #333; /* Definimos el color del icono */
+        display: inline-block; /* Permitimos manipular su contenido */
+        height: 30px; /* Definimos su altura */
+        line-height: 30px; /* Definimos la altura de línea */
+        text-align: center; /* Alineamos el texto */
+      }
+  .slider {
+  width: 0 70%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 600%;
+  transition: 2s;
+  animation: cambio 25s infinite alternate linear;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  width: 70%;
+}
+
+.product-row {
+    margin-left:0px ;
+    margin-right:0px;
+
+}
+.product {
+    padding: 0px;
+    width: 90%;
+    flex-basis: 100%;
+    margin-bottom:0px; 
+    margin-right:0px; 
+    border:0px;
+}
+     nav{
+  width: 100%;
+  max-width: 100%;
+}
+.product img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 5%;
+    margin-top: 6%;
+}
+    }
+
+/*fin de estilos para la barra de navegacion*/
+
