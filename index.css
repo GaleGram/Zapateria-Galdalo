@@ -10,6 +10,9 @@
   font-family: Arial, sans-serif;
 
 }
+
+
+
 /*estilos para la barra de navegacion*/
 .overlay {
   position: relative;
@@ -69,6 +72,14 @@ nav a {
 .menu-toggle{
   display: none;
 }
+.catalogos img{
+  width: 30%;
+  height: auto;
+}
+.imgp{
+  width: 50%;
+  height: auto;
+}
 /* inicio de estilos para el slider*/
 .slider {
   width: 0 20%;
@@ -86,6 +97,7 @@ nav a {
 
 .slider li {
   width: 100%;
+  margin-top: 0.5%;
   list-style: none;
 }
 
@@ -112,6 +124,42 @@ nav a {
   87% {margin-left: -500%;}
   100% {margin-left: -500%;}
 }
+
+@keyframes cambio2 {
+  0% {margin-left: 0;}
+  30% {margin-left: 0;}
+  
+  33.333333% {margin-left: -100%;}
+  63.333333% {margin-left: -100%;}
+  
+  66.666666% {margin-left: -200%;}
+  100% {margin-left: -200%;}
+}
+.slider2 {
+  width: 0 20%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider2 ul {
+  display: flex;
+  padding: 0;
+  width: 300%;
+  transition: 2s;
+  animation: cambio2 10s infinite linear;
+}
+
+.slider2 li {
+  width: 100%;
+  margin-top: 0.5%;
+  margin-bottom: 50px;
+  list-style: none;
+}
+
+.slider2 img {
+  width: 20%;
+}
+
 /*fin de estilos para el slider*/
 img {
   max-width: auto;
@@ -127,9 +175,15 @@ h2{
   color:rgb(250,251,253);
 
 }
+
 h3{
   margin-top: 50px;
   font-size: 40px;
+  color: white;
+}
+h4{
+  margin-top: 60px;
+  font-size: 45px;
   color: white;
 }
 p{
@@ -152,12 +206,28 @@ button {
 
 footer {
   background-color: rgba(2,5,24,0.9);
-  color: #fff;
   display: flex;
   align-items: center;
+  flex-direction: column; 
   justify-content: center;
   height: 5%;
+  font-size: 20px;
+  padding: 30px;
+}
+footer a{
+  color: white;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+}
 
+.footer-icons i {
+  font-size: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  padding: 10px;
 }
 
 
@@ -223,7 +293,16 @@ h5{
 }
 /*fin de estilos para los contenedores de imagenes zapatos*/
 @media(max-width: 768px) { /* Definimos las reglas para una pantalla de máximo 768px */
+.catalogos img{
+  width: 45%;
+  height: auto;
+}
 
+
+.imgp{
+  width: 70%;
+  height: auto;
+}
       nav ul {
         flex-direction: column; /* Alineamos los elementos verticalmente */
         background-color: rgba(2,5,24,1.0); /* Cambiamos el color de fondo */
@@ -234,6 +313,7 @@ h5{
         visibility: hidden; /* Lo hacemos invisible por defecto */
         opacity: 0; /* Lo hacemos completamente transparente */
         transition: all 0.5s ease-in-out; /* Añadimos efectos para la transición */
+        font-size: 25px;    
       }
       
       nav li {
@@ -245,7 +325,7 @@ h5{
         color: rgb(251,252,253); /* Color del texto */
         text-decoration: none; /* Quitamos el subrayado */
         text-transform: uppercase; /* Convertimos el texto a mayúsculas */
-        font-size: 18px; /* Ampliamos el tamaño de fuente */
+        font-size: 25px; /* Ampliamos el tamaño de fuente */
       }
       
       nav .menu-toggle:checked + ul {

@@ -67,7 +67,7 @@ nav ul {
 
 nav ul li {
     margin-right: 20px;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 nav ul li a {
@@ -164,7 +164,7 @@ main {
         color: rgb(251,252,253); /* Color del texto */
         text-decoration: none; /* Quitamos el subrayado */
         text-transform: uppercase; /* Convertimos el texto a mayúsculas */
-        font-size: 18px; /* Ampliamos el tamaño de fuente */
+        font-size: 23px; /* Ampliamos el tamaño de fuente */
       }
       
       nav .menu-toggle:checked + ul {
@@ -189,7 +189,7 @@ main {
         content: "\f0c9"; /* Añadimos un icono de barras */
         font-family: "Font Awesome 5 Free"; /* Incluimos la fuente de Font Awesome */
         font-weight: bold; /* Definimos el peso de la fuente */
-        font-size: 18px; /* Definimos el tamaño de la fuente */
+        font-size: 23px; /* Definimos el tamaño de la fuente */
         color: #333; /* Definimos el color del icono */
         display: inline-block; /* Permitimos manipular su contenido */
         height: 30px; /* Definimos su altura */
