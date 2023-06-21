@@ -157,7 +157,7 @@ nav a {
 }
 
 .slider2 img {
-  width: 20%;
+  width: 28%;
 }
 
 /*fin de estilos para el slider*/
@@ -296,6 +296,9 @@ h5{
 .catalogos img{
   width: 45%;
   height: auto;
+}
+.slider2 img {
+  width: 70%;
 }
 
 
