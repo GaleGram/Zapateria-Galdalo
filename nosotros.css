@@ -5,13 +5,30 @@
 }
 /*inicio de estilos para los titulos*/
 footer {
-  background-color: rgba(2,5,24,1.0);
-  color: #fff;
+  background-color: rgba(2,5,24,0.9);
   display: flex;
   align-items: center;
+  flex-direction: column; 
   justify-content: center;
-  height: 50px;
+  height: 5%;
+  font-size: 20px;
+  padding: 30px;
+  color: white;
+}
+footer a {
+  color: white;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+}
 
+.footer-icons i {
+  font-size: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  padding: 10px;
 }
 h1 {
   text-align: center;
@@ -26,6 +43,7 @@ h2{
   color: rgb(251,253,252);
 }
 /*fin de estilos para los titulos*/
+
 /*inicio de estilos para el acordeon*/
 .accordion {
   width: 0 90%;
@@ -242,7 +260,7 @@ nav ul li a:hover {
       }
       
       nav .menu-toggle:before {
-        content: "\f0c9"; /* Añadimos un icono de barras */
+        content: ""; /* Añadimos un icono de barras */
         font-family: "Font Awesome 5 Free"; /* Incluimos la fuente de Font Awesome */
         font-weight: bold; /* Definimos el peso de la fuente */
         font-size: 18px; /* Definimos el tamaño de la fuente */

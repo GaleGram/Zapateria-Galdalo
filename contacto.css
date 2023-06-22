@@ -8,16 +8,29 @@
 }
 footer {
   background-color: rgba(2,5,24,0.9);
-  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  height: 5%;
+  font-size: 20px;
+  padding: 30px;
+  color: white;
+}
+footer a{
+  color: white;
+}
+.footer-icons {
   display: flex;
   justify-content: center;
-  height: 50px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  width: 100%;
+}
 
+.footer-icons i {
+  font-size: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  padding: 10px;
 }
 /*fondo del sitio*/
 body{
