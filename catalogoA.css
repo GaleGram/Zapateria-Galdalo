@@ -158,6 +158,9 @@ main {
       main {
     width: 100%;
     margin: 0 auto;
+          *{
+              font-size:1.5rem;
+          }
 }
 
       nav ul {
@@ -181,7 +184,7 @@ main {
         color: rgb(251,252,253); /* Color del texto */
         text-decoration: none; /* Quitamos el subrayado */
         text-transform: uppercase; /* Convertimos el texto a mayúsculas */
-        font-size: 23px; /* Ampliamos el tamaño de fuente */
+        font-size: 0.7rem; /* Ampliamos el tamaño de fuente */
       }
       
       nav .menu-toggle:checked + ul {
@@ -206,7 +209,7 @@ main {
         content: ""; /* Añadimos un icono de barras */
         font-family: "Font Awesome 5 Free"; /* Incluimos la fuente de Font Awesome */
         font-weight: bold; /* Definimos el peso de la fuente */
-        font-size: 23px; /* Definimos el tamaño de la fuente */
+        font-size: 0.7rem; /* Definimos el tamaño de la fuente */
         color: #333; /* Definimos el color del icono */
         display: inline-block; /* Permitimos manipular su contenido */
         height: 30px; /* Definimos su altura */
